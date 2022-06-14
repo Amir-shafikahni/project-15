@@ -19,7 +19,7 @@ body {
     filter: blur(5px);
 }
 
-.bgContainer img{
+.bgContainer img {
     transition: 0.3s;
     height: 100%;
     width: 100%;
@@ -47,32 +47,32 @@ body {
     transition: 0.3s;
 }
 
-.coverImg img{
+.coverImg img {
     height: 100%;
     width: 100%;
 }
 
-.active{
+.active {
     width: 0;
     height: 0;
     opacity: 0;
 }
 
-.audioInfo{
+.audioInfo {
     padding-top: 350px;
 }
 
-.audioName{
+.audioName {
     font-size: 25px;
     font-weight: 500;
 }
 
-.audioArtist{
+.audioArtist {
     font-size: 23px;
     color: rgba(0, 0, 0, 80%);
 }
 
-.timeBar{
+.timeBar {
     justify-content: space-between;
     display: flex;
     margin-bottom: 3px;
@@ -81,44 +81,44 @@ body {
     height: 20px;
 }
 
-.progressBar{
+.progressBar {
     background-color: rgba(0, 0, 0, 10%);
     border-radius: 10px;
     cursor: pointer;
     height: 5px;
 }
 
-.progress{
-    background-color: rgba(0,0, 0, 70%);
+.progress {
+    background-color: rgba(0, 0, 0, 70%);
     border-radius: 50px;
     height: 100%;
     width: 0%;
     transition: 0.3s;
 }
 
-.controls{
+.controls {
     text-align: center;
     height: 50px;
     margin-top: 25px;
     align-items: center;
 }
 
-.controls i{
-    color: rgba(0,0, 0, 60%);
+.controls i {
+    color: rgba(0, 0, 0, 60%);
     font-size: 32px;
     cursor: pointer;
-    transition: all 0.3s , transform 0.1s;
+    transition: all 0.3s, transform 0.1s;
     width: 35px;
 }
 
-.controls i:active{
+.controls i:active {
     transform: scale(0.7);
 }
 
-.controls i:nth-child(2){
+.controls i:nth-child(2) {
     margin: 0px 25px;
 }
 
-.controls i:hover{
-    color: rgba(0,0, 0, 80%);
+.controls i:hover {
+    color: rgba(0, 0, 0, 80%);
 }

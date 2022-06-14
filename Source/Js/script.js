@@ -3,9 +3,9 @@ let $ = document;
 ////////////////////////////
 
 const body = $.body;
-const bgContainerImage = $.querySelector(".bgContainer img")
-const coverImgElem = $.querySelector(".coverImg")
-const coverImg = $.querySelector(".coverImg img")
+const bgContainerImage = $.querySelector(".bgContainer img");
+const coverImgElem = $.querySelector(".coverImg");
+const coverImg = $.querySelector(".coverImg img");
 const audioElem = $.querySelector("audio");
 const audioNameElem = $.querySelector(".audioName");
 const audioArtistElem = $.querySelector(".audioArtist");
@@ -25,7 +25,8 @@ const audios = [
     audioArtist: "Eminem",
   },
   {
-    audioSrc: "./Source/Media/Audios/Reza_Pishro__-_Tamum_Shode_(Ft_Kamyar).mp3",
+    audioSrc:
+      "./Source/Media/Audios/Reza_Pishro__-_Tamum_Shode_(Ft_Kamyar).mp3",
     cover: "./Source/Media/Images/img-2.jpg",
     audioName: "Tamum Shod",
     audioArtist: "Pishro",
@@ -44,6 +45,7 @@ const audios = [
   },
 ];
 
+
 // Functions
 // to show playing status
 let isPlaying = false;
@@ -56,8 +58,8 @@ function domUpdater() {
   audioElem.src = audios[srcIndex].audioSrc;
   audioNameElem.innerHTML = audios[srcIndex].audioName;
   audioArtistElem.innerHTML = audios[srcIndex].audioArtist;
-  bgContainerImage.src = audios[srcIndex].cover
-  coverImg.src = audios[srcIndex].cover
+  bgContainerImage.src = audios[srcIndex].cover;
+  coverImg.src = audios[srcIndex].cover;
 }
 domUpdater();
 
@@ -83,10 +85,10 @@ function previousMusic() {
   audioElem.src = audios[srcIndex].audioSrc;
   audioNameElem.innerHTML = audios[srcIndex].audioName;
   audioArtistElem.innerHTML = audios[srcIndex].audioArtist;
-  bgContainerImage.src = audios[srcIndex].cover
-  coverImg.src = audios[srcIndex].cover
+  bgContainerImage.src = audios[srcIndex].cover;
+  coverImg.src = audios[srcIndex].cover;
 
-  setActiveAnimation()
+  setActiveAnimation();
   playMusic();
 }
 
@@ -111,10 +113,10 @@ function nextMusic() {
   audioElem.src = audios[srcIndex].audioSrc;
   audioNameElem.innerHTML = audios[srcIndex].audioName;
   audioArtistElem.innerHTML = audios[srcIndex].audioArtist;
-  bgContainerImage.src = audios[srcIndex].cover
-  coverImg.src = audios[srcIndex].cover
+  bgContainerImage.src = audios[srcIndex].cover;
+  coverImg.src = audios[srcIndex].cover;
 
-  setActiveAnimation()
+  setActiveAnimation();
   playMusic();
 }
 
@@ -145,18 +147,19 @@ function audioTimeUpdater(event) {
 }
 
 function setProgressBar(event) {
-    const width = this.clientWidth
-    const clickX = event.offsetX
-    progressElem.style.width = width + "px"
-    audioElem.currentTime = (clickX / width) * audioElem.duration
+  const width = this.clientWidth;
+  const clickX = event.offsetX;
+  progressElem.style.width = width + "px";
+  audioElem.currentTime = (clickX / width) * audioElem.duration;
 }
 
-function setActiveAnimation (){
-    coverImgElem.classList.add("active")
-    setTimeout(function(){
-        coverImgElem.classList.remove("active")
-    },100)
+function setActiveAnimation() {
+  coverImgElem.classList.add("active");
+  setTimeout(function () {
+    coverImgElem.classList.remove("active");
+  }, 100);
 }
+
 
 // EventListeners
 backwardBtn.addEventListener("click", previousMusic);
